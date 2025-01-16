@@ -1,0 +1,231 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s ease;
+}
+
+/* Скрываем форму по умолчанию */
+.form-container {
+    display: none;
+}
+
+/* Задний фон с эффектом параллакса */
+.parallax {
+    background: url('img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    transition: filter 0.5s ease; /* Плавный переход */
+    filter: blur(0px); /* Без размытия по умолчанию */
+}
+
+.parallax.scrolled {
+    filter: blur(5px); /* Размытие при прокрутке */
+}
+
+button.start-form {
+    background-color: #147751; /* Основной цвет кнопки */
+    color: white; /* Цвет текста */
+    padding: 15px 30px; /* Отступы для увеличения размера кнопки */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    border: none; /* Убираем стандартную рамку */
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer; /* Курсор в виде указателя */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный переход для эффектов */
+}
+
+button.start-form:hover {
+    background-color: #0e5c3a; /* Темнее при наведении */
+    transform: scale(1.05); /* Легкое увеличение кнопки при наведении */
+}
+
+button.start-form:active {
+    background-color: #0a4729; /* Ещё темнее при нажатии */
+    transform: scale(0.95); /* Легкое уменьшение при нажатии */
+}
+
+
+/* Стили для заголовка */
+header {
+    background-color: #147751;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px #147751;
+    position: sticky;
+    margin-block-start: -150px;
+    top: 10;
+    z-index: 10;
+}
+
+header img {
+    max-width: 120px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+}
+
+/* Добро пожаловать */
+.welcome {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(20, 119, 81, 0.9);
+    color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Контейнер для формы */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Этапы формы */
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+/* Кнопки формы */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #147751;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-buttons button:hover {
+    background-color: #0e5c3a;
+}
+
+/* Волнообразный эффект */
+.wave {
+    position: relative;
+    height: 150px;
+    background: #147751;
+}
+
+.wave::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('img/wave.svg') repeat-x;
+    background-size: cover;
+    bottom: 0;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    background-color: #147751;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button#submitButton {
+    display: block; /* Убедитесь, что кнопка видна */
+    background-color: #147751; /* Основной цвет кнопки */
+    color: white; /* Цвет текста */
+    padding: 15px 30px; /* Отступы для размера */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    border: none; /* Убираем стандартную рамку */
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer; /* Курсор-указатель */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень кнопки */
+    margin: 20px auto; /* Центрируем кнопку */
+    text-align: center; /* Текст по центру */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные эффекты */
+}
+
+button#submitButton:hover {
+    background-color: #0e5c3a; /* Темнее при наведении */
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+button#submitButton:active {
+    background-color: #0a4729; /* Ещё темнее при нажатии */
+    transform: scale(0.95); /* Легкое уменьшение при нажатии */
+}
+
+
+/* Общие стили для всех полей ввода */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%; /* Полная ширина контейнера */
+    padding: 10px; /* Внутренние отступы */
+    margin: 10px 0 20px 0; /* Отступы сверху и снизу */
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Внутренняя тень */
+    font-size: 16px; /* Размер текста */
+    font-family: Arial, sans-serif; /* Шрифт */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Плавные переходы */
+}
+
+/* При наведении и фокусе на поле */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    border-color: #147751; /* Зеленая рамка */
+    box-shadow: 0 0 5px rgba(20, 119, 81, 0.5); /* Внешняя тень */
+    outline: none; /* Убираем стандартное выделение */
+}
+
+/* Стили для меток (labels) */
+label {
+    display: block; /* Метка занимает всю ширину */
+    margin-bottom: 8px; /* Отступ снизу */
+    font-size: 14px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    color: #147751; /* Зеленый цвет */
+    text-transform: uppercase; /* Заглавные буквы */
+    font-family: Arial, sans-serif;
+}
+
+/* Контейнер для каждого шага формы */
+.form-step {
+    margin-bottom: 20px; /* Отступы между шагами */
+}

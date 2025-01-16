@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halyq Qahary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+</head>
+<body>
+    <div class="parallax"></div>
+    <header>
+        <img src="img/logo.png" alt="Halyq Qahary Logo">
+        <h1>HALYQ QAHARY</h1>
+    </header>
+    <div class="welcome">
+    <h1>Добро пожаловать!</h1>
+    <p>Заполните форму, чтобы присоединиться к нашей команде или обновить свои данные.</p>
+    <button class="start-form" onclick="startForm()">Заполнить анкету</button>
+    </div>
+    <div class="form-container" id="formContainer">
+        <form id="registrationForm">
+            <!-- Step 1 -->
+            <div class="form-step active">
+                <label for="name">Имя и фамилия:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step">
+                <label for="birthDate">Дата рождения:</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step">
+                <label for="phone">Контактный номер:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="form-step">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="form-step">
+                <label for="education">Где учится:</label>
+                <input type="text" id="education" name="education" required>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-buttons">
+                <button type="button" class="prev" onclick="prevStep()">Назад</button>
+                <button type="button" class="next" onclick="nextStep()">Далее</button>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" id="submitButton">Отправить</button>
+        </form>
+    </div>
+    <div class="wave"></div>
+    <footer>
+        © 2025 Halyq Qahary. Все права защищены.
+    </footer>   
+</body>
+</html>
